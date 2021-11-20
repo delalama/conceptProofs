@@ -1,4 +1,4 @@
 # Repo to store all my proofs of concept
 
 - ASPECTS
-  LINK [LINK](ASPECTS GITHUB LINK ).
+  LINK [LINK](https://github.com/delalama/conceptProofs/tree/master/aspects ).
