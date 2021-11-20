@@ -2,7 +2,7 @@
 
 Beautify your logger in a simple way.
 
-![IMAGE](/assets/images/san-juan-mountains.jpg "Intellij logger")
+![IMAGE](https://github.com/delalama/conceptProofs/blob/master/aspects/src/main/resources/employeeLogger.png "Intellij logger")
 
 
 @By jesusdll
