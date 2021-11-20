@@ -1,4 +1,4 @@
-# SPRING AOP EXAMPLE
+# SPRING ANNOTATION EXAMPLE
 
 Beautify your logger in a simple way.
 
