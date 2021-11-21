@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aspects" />
         <module name="annotations" />
+        <module name="APIStream" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="APIStream" options="-parameters" />
       <module name="annotations" options="-parameters" />
       <module name="aspects" options="-parameters" />
     </option>

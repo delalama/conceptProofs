@@ -8,6 +8,8 @@
         <option value="$USER_HOME$/Downloads/annotations/pom.xml" />
         <option value="$USER_HOME$/Downloads/aspects/pom.xml" />
         <option value="$PROJECT_DIR$/annotations/pom.xml" />
+        <option value="$USER_HOME$/Downloads/APIStream/pom.xml" />
+        <option value="$PROJECT_DIR$/APIStream/pom.xml" />
       </list>
     </option>
   </component>
