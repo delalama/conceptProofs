@@ -8,11 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.validation.Validator;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.ValidatorFactory;
-import java.util.Set;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PersonTest extends TestCase {
@@ -21,7 +16,7 @@ public class PersonTest extends TestCase {
     private Validator validator;
 
     @Test
-    public void shouldValidateDuplicatedLogin() throws Exception {
+    public void shouldValidateDuplicatedLogin() {
         // given
         String login = "daniel";
         Person predefinedPerson = new Person(1D, "pass", 44D);

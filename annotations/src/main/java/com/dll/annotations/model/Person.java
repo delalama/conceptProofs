@@ -3,11 +3,8 @@ package com.dll.annotations.model;
 import com.dll.annotations.annotations.DLLValidation;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
 
 import javax.validation.Valid;
-
-import static com.dll.annotations.model.PersonValidator.validate;
 
 @Getter
 @Setter

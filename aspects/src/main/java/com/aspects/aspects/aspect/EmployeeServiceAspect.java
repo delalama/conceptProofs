@@ -36,7 +36,7 @@ public class EmployeeServiceAspect {
     }
 
 
-    @Order(Ordered.LOWEST_PRECEDENCE)
+    @Order()
     @After(value = "execution(* com.aspects.aspects.service.EmployeeService.*(..)) ")
     public void finishEmployeeServiceMethod() {
         log.info("**** FINISHIG EMPLOYEE SERVICE METHOD ****");
