@@ -1,8 +1,9 @@
 # SPRING ANNOTATION EXAMPLE
 
-Beautify your logger in a simple way.
+Simple attribute validation.
 
-![IMAGE](https://github.com/delalama/conceptProofs/blob/master/aspects/src/main/resources/employeeLogger.png "Intellij logger")
+
+![IMAGE](https://github.com/delalama/conceptProofs/blob/master/annotations/src/main/resources/validator.png "Intellij console")
 
 
 @By jesusdll
