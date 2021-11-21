@@ -5,37 +5,79 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.lang.System.out;
 
 @SpringBootApplication
 public class ApiStreamApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ApiStreamApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ApiStreamApplication.class, args);
+    }
 
-	@Override
-	public void run(String... args) throws Exception {
-		Person p1 = new Person("JesusDLL",20);
-		Person p2 = new Person("Flori",30);
+    @Override
+    public void run(String... args) throws Exception {
+        List<Person> persons = createPersonsList();
 
-		List<Person> persons = Arrays.asList(p1, p2);
+        printPersonWithNameDLL(persons);
 
-		persons.stream()
-				.filter(p -> p.getName().contains("DLL"))
-				.forEach( p -> p.Print());
+        printPersonsAgeUpTo10(persons);
 
-		System.out.println("AGES UP TO 10");
-		persons.stream()
-				.filter(p -> p.getAge() > 10)
-				.forEach(p -> p.Print());
+        sumAges(persons);
 
-		System.out.println("SUM OF PERSONS AGES");
-		System.out.println(persons.stream()
-				.map(p -> p.getAge())
-				.reduce(0,Integer::sum)
-		);
+        printOnly2(persons);
 
-	}
+        sort(persons);
+
+
+    }
+
+    private void sort(List<Person> persons) {
+        out.println("\nSort list");
+        persons.stream()
+                .sorted(Comparator.comparing(Person::getName))
+                .forEach(Person::Print);
+
+    }
+
+    private void printOnly2(List<Person> persons) {
+        out.println("\nPrint only two of them");
+        persons.stream()
+                .limit(2)
+                .forEach(Person::Print);
+    }
+
+    private void sumAges(List<Person> persons) {
+        out.println("\nSUM OF PERSONS AGES");
+        out.println(persons.stream()
+                .map(p -> p.getAge())
+                .reduce(0, Integer::sum)
+        );
+    }
+
+    private void printPersonsAgeUpTo10(List<Person> persons) {
+        out.println("\nAGES UP TO 10");
+        persons.stream()
+                .filter(p -> p.getAge() > 10)
+                .forEach(Person::Print);
+    }
+
+    private List<Person> createPersonsList() {
+        Person p1 = new Person("JesusDLL", 20);
+        Person p2 = new Person("Flori", 30);
+        Person p3 = new Person("Zupi", 8);
+
+        List<Person> persons = Arrays.asList(p1, p2, p3);
+        return persons;
+    }
+
+    private void printPersonWithNameDLL(List<Person> persons) {
+        out.println("\nPerson with name DLL");
+
+        persons.stream()
+                .filter(p -> p.getName().contains("DLL"))
+                .forEach(Person::Print);
+    }
 }

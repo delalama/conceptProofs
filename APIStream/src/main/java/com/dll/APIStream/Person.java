@@ -12,6 +12,6 @@ public class Person {
     private Integer age;
 
     public void Print() {
-        System.out.println("NAME: " + name + "\n AGE: " + age);
+        System.out.println("** NAME: " + name + " | AGE: " + age);
     }
 }
