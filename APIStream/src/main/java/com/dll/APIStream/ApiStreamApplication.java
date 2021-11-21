@@ -31,6 +31,17 @@ public class ApiStreamApplication implements CommandLineRunner {
 
         conditionalForEach(persons);
 
+        count(persons);
+
+    }
+
+    private void count(List<Person> persons) {
+        out.println("\n Count persons up to age 10 ");
+
+        out.println(persons.stream()
+                .filter(p -> p.getAge() > 10)
+                .count());
+
     }
 
     private void conditionalForEach(List<Person> persons) {
