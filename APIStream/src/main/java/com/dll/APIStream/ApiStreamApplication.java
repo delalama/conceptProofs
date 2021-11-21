@@ -18,19 +18,24 @@ public class ApiStreamApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Person p1 = new Person("JesusDLL",20);
-		Person p2 = new Person("Flori",20);
+		Person p2 = new Person("Flori",30);
 
 		List<Person> persons = Arrays.asList(p1, p2);
 
 		persons.stream()
 				.filter(p -> p.getName().contains("DLL"))
-				.collect(Collectors.toList())
 				.forEach( p -> p.Print());
 
 		System.out.println("AGES UP TO 10");
 		persons.stream()
 				.filter(p -> p.getAge() > 10)
 				.forEach(p -> p.Print());
+
+		System.out.println("SUM OF PERSONS AGES");
+		System.out.println(persons.stream()
+				.map(p -> p.getAge())
+				.reduce(0,Integer::sum)
+		);
 
 	}
 }
