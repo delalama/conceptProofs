@@ -14,6 +14,7 @@
         <module>APIStream</module>
         <module>annotations</module>
         <module>aspects</module>
+        <module>hibernate</module>
     </modules>
 
     <properties>
