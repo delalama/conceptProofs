@@ -5,10 +5,7 @@ import com.dll.hibernate.service.WorkerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,5 +34,23 @@ public class WorkerController {
         Worker postedWorker = workerService.postWorker(worker);
 
         return new ResponseEntity<>(postedWorker, HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    ResponseEntity<?> updateWorker(@RequestBody Worker worker, @PathVariable Long id) {
+
+        Worker updatedWorker = workerService.update(worker, id);
+
+        return new ResponseEntity<>(updatedWorker, HttpStatus.OK);
+
+    }
+
+    @DeleteMapping("/{id}")
+    ResponseEntity<?> deleteWorker(@PathVariable Long id) {
+
+        String message = workerService.delete(id);
+
+        return new ResponseEntity<>(message, HttpStatus.OK);
+
     }
 }
