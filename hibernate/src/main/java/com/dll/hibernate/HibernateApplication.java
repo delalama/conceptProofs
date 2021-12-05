@@ -27,15 +27,14 @@ public class HibernateApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    Worker w = new Worker();
-    w.setName("Manolo");
-    w.setSurname("lolo");
-    w.setWorkerType(WorkerType.DESARROLLADOR);
-
-    repository.save(w);
-
-    logger.info(String.valueOf(repository.findAll()));
-
+//    Worker w = new Worker();
+//    w.setName("Manolo");
+//    w.setSurname("lolo");
+//    w.setWorkerType(WorkerType.DESARROLLADOR);
+//
+//    repository.save(w);
+//
+//    logger.info(String.valueOf(repository.findAll()));
 
   }
 }

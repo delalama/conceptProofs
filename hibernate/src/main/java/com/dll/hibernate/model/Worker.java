@@ -22,6 +22,16 @@ public class Worker extends AbstractEntity {
     private String surname;
     private Company company;
 
+    public Worker() {
+    }
+
+    public Worker(WorkerType workerType, String name, String surname, Company company) {
+        this.workerType = workerType;
+        this.name = name;
+        this.surname = surname;
+        this.company = company;
+    }
+
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Override
     public Long getId() {

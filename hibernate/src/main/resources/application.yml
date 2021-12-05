@@ -5,6 +5,7 @@ spring:
     username: delalama
     password: delalama
     driverClassName: org.h2.Driver
+
   jpa:
     generate-ddl: true
     show-sql: true
@@ -18,3 +19,9 @@ spring:
     console.settings.trace: false
     console.settings.web-allow-others: false
 
+  liquibase:
+    enabled: false
+
+#LIQUIBASE
+liquibase:
+  change-log: "classpath:liquibase-changeLog.xml"

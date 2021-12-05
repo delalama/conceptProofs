@@ -1,0 +1,29 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="delalama" id="delalama">
+        <!--INSERT COMPANY-->
+        <insert tableName="company">
+            <column name="name" value="DLL SA"/>
+            <column name="description" value="DLL desc"/>
+            <column name="surname" value="DLL"/>
+        </insert>
+
+        <!--INSERT WORKER-->
+
+        <insert tableName="worker">
+            <column name="workerType" value="JEFE"/>
+            <column name="name" value="DLL boss"/>
+            <column name="surname" value="DLL"/>
+        </insert>
+        <insert tableName="worker">
+            <column name="workerType" value="BECARIO"/>
+            <column name="name" value="FLORI"/>
+            <column name="surname" value="BI"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

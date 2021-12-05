@@ -16,6 +16,14 @@ public class Company extends AbstractEntity {
     private String name;
     private String description;
 
+    public Company() {
+    }
+
+    public Company(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Override
     public Long getId() {

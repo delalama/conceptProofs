@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -27,5 +29,13 @@ public class WorkerController {
         List<Worker> all = workerService.getAll();
 
         return new ResponseEntity<>(all, HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Worker> postWorker(@RequestBody Worker worker) {
+
+        Worker postedWorker = workerService.postWorker(worker);
+
+        return new ResponseEntity<>(postedWorker, HttpStatus.OK);
     }
 }
