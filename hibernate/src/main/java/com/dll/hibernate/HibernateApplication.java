@@ -10,22 +10,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 
-import java.util.Optional;
-
 @SpringBootApplication
 @PropertySource("classpath:db/h2/application-h2.properties")
 public class HibernateApplication implements CommandLineRunner {
 
-  private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-  @Autowired WorkerRepository repository;
+    @Autowired
+    WorkerRepository repository;
 
-  public static void main(String[] args) {
-    SpringApplication.run(HibernateApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(HibernateApplication.class, args);
+    }
 
-  @Override
-  public void run(String... args) throws Exception {
+    @Override
+    public void run(String... args) throws Exception {
 //    Worker w = new Worker();
 //    w.setName("Manolo");
 //    w.setSurname("lolo");
@@ -35,7 +34,7 @@ public class HibernateApplication implements CommandLineRunner {
 //
 //    logger.info(String.valueOf(repository.findAll()));
 
-  }
+    }
 
 
 }

@@ -2,7 +2,6 @@ package com.dll.hibernate.controller;
 
 import com.dll.hibernate.model.Document;
 import com.dll.hibernate.service.DocumentService;
-import com.dll.hibernate.service.DocumentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

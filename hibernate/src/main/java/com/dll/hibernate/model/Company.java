@@ -1,14 +1,9 @@
 package com.dll.hibernate.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name="COMPANY")
+@Table(name = "COMPANY")
 public class Company extends AbstractEntity {
 
     private static final long serialVersionUID = 1460669361717988469L;
@@ -24,13 +19,14 @@ public class Company extends AbstractEntity {
         this.description = description;
     }
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Override
     public Long getId() {
         return id;
     }
 
-    @Column(length=45, nullable=false)
+    @Column(length = 45, nullable = false)
     public String getName() {
         return name;
     }
@@ -39,7 +35,7 @@ public class Company extends AbstractEntity {
         this.name = name;
     }
 
-    @Column(length=255, nullable=true)
+    @Column(length = 255, nullable = true)
     public String getDescription() {
         return description;
     }

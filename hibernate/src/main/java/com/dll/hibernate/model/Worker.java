@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="WORKER")
+@Table(name = "WORKER")
 public class Worker extends AbstractEntity {
 
     private static final long serialVersionUID = 6430623703467941209L;
@@ -14,7 +14,7 @@ public class Worker extends AbstractEntity {
     private String surname;
     private Company company;
 
-    @OneToMany(orphanRemoval=true)
+    @OneToMany(orphanRemoval = true)
     List<Document> documents;
 
     public Worker() {
@@ -27,7 +27,8 @@ public class Worker extends AbstractEntity {
         this.company = company;
     }
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Override
     public Long getId() {
         return id;
@@ -43,7 +44,7 @@ public class Worker extends AbstractEntity {
         this.workerType = workerType;
     }
 
-    @Column(length=255, nullable=false)
+    @Column(length = 255, nullable = false)
     public String getName() {
         return name;
     }
@@ -52,7 +53,7 @@ public class Worker extends AbstractEntity {
         this.name = name;
     }
 
-    @Column(length=255, nullable=false)
+    @Column(length = 255, nullable = false)
     public String getSurname() {
         return surname;
     }
