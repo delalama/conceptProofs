@@ -3,11 +3,11 @@ package com.dll.hibernate;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class HibernateApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-}
+//@SpringBootTest
+//class HibernateApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}

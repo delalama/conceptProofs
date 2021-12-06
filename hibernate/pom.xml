@@ -53,22 +53,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--SWAGGER-->
-        <!--        <dependency>-->
-        <!--            <groupId>io.springfox</groupId>-->
-        <!--            <artifactId>springfox-swagger2</artifactId>-->
-        <!--            <version>3.0.0</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>io.springfox</groupId>-->
-        <!--            <artifactId>springfox-boot-starter</artifactId>-->
-        <!--            <version>3.0.0</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>io.springfox</groupId>-->
-        <!--            <artifactId>springfox-swagger-ui</artifactId>-->
-        <!--            <version>2.5.0</version>-->
-        <!--        </dependency>-->
+
+        <!--        OPEN API-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.12</version>
+        </dependency>
+
         <!--        DB-->
         <!-- https://mvnrepository.com/artifact/org.liquibase/liquibase-core -->
         <!--        <dependency>-->
@@ -95,36 +87,30 @@
     <!--        </plugins>-->
     <!--    </build>-->
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
     <profiles>
         <profile>
-            <id>H2DEV</id>
+            <id>dev</id>
             <activation>
-                <property>
-                    <name>H2DEV</name>
-                </property>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <activatedProperties>dev</activatedProperties>
+                <spring.profiles.active>dev</spring.profiles.active>
             </properties>
         </profile>
         <profile>
-            <id>H2PROD</id>
-            <activation>
-                <property>
-                    <name>H2PROD</name>
-                </property>
-            </activation>
+            <id>prod</id>
             <properties>
-                <activatedProperties>prod</activatedProperties>
+                <spring.profiles.active>prod</spring.profiles.active>
             </properties>
-        </profile>
-        <profile>
-            <id>MySQL</id>
-            <activation>
-                <property>
-                    <name>MySQL</name>
-                </property>
-            </activation>
         </profile>
     </profiles>
 

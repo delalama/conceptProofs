@@ -7,7 +7,7 @@
 --  description VARCHAR(255) NOT NULL,
 --  PRIMARY KEY(id)
 --) engine=innodb default charset=utf8 collate=utf8_spanish_ci;
-
+--
 --CREATE TABLE WORKER (
 --  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
 --  COMPANY_id INTEGER UNSIGNED NOT NULL,
