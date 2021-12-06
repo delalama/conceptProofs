@@ -10,9 +10,9 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = DLLValidator.class)
 public @interface DLLValidation {
-    public String message() default "Invalid name: must be DLL";
+    String message() default "Invalid name: must be DLL";
 
-    public Class<?>[] groups() default {};
+    Class<?>[] groups() default {};
 
-    public Class<? extends Payload>[] payload() default {};
+    Class<? extends Payload>[] payload() default {};
 }

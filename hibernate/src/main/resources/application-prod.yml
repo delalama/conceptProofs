@@ -1,7 +1,7 @@
 #SPRING CONF
 spring:
   datasource:
-    url: jdbc:h2:file:./db/store;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    url: jdbc:h2:file:./db/storeDEV;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
     username: delalama
     password: delalama
     driverClassName: org.h2.Driver
@@ -19,9 +19,14 @@ spring:
     console.settings.trace: false
     console.settings.web-allow-others: false
 
+  #LIQUIBASE
   liquibase:
     enabled: false
+    change-log: "classpath:liquibase-changeLog.xml"
 
-#LIQUIBASE
-liquibase:
-  change-log: "classpath:liquibase-changeLog.xml"
+#  ACTUATOR
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings

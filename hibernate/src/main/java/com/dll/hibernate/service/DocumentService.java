@@ -1,6 +1,7 @@
 package com.dll.hibernate.service;
 
 import com.dll.hibernate.dao.DocumentRepository;
+import com.dll.hibernate.dao.WorkerRepository;
 import com.dll.hibernate.model.Document;
 import org.springframework.stereotype.Service;
 
@@ -9,9 +10,11 @@ import java.util.List;
 @Service
 public class DocumentService {
     private final DocumentRepository documentRepository;
+    private final WorkerRepository workerRepository;
 
-    public DocumentService(DocumentRepository documentRepository) {
+    public DocumentService(DocumentRepository documentRepository, WorkerRepository workerRepository) {
         this.documentRepository = documentRepository;
+        this.workerRepository = workerRepository;
     }
 
     public Document postDocument(Document document) {

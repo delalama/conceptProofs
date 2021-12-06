@@ -14,8 +14,9 @@ public class WorkerService {
     WorkerRepository workerRepository;
     CompanyRepository companyRepository;
 
-    public WorkerService(WorkerRepository workerRepository) {
+    public WorkerService(WorkerRepository workerRepository, CompanyRepository companyRepository) {
         this.workerRepository = workerRepository;
+        this.companyRepository = companyRepository;
     }
 
     public List<Worker> getAll() {

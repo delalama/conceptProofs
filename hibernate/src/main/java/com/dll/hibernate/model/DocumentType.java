@@ -5,7 +5,7 @@ public enum DocumentType {
     TXT("TXT"),
     ODT("ODT");
 
-    private String txt;
+    private final String txt;
 
     public String getTxt() {
         return txt;
