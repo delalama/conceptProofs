@@ -4,7 +4,6 @@ server:
   port: 8081
 
 spring:
-  profiles: prod
 
   jpa:
     defer-datasource-initialization: true
