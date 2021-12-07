@@ -1,16 +1,7 @@
 #SPRING CONFIG
+
 server:
   port: 8081
-
-logging:
-  level:
-    org:
-      hibernate:
-        SQL: DEBUG
-        type:
-          descriptor:
-            sql: trace
-            BasicBinder: TRACE
 
 spring:
   profiles: prod
@@ -32,12 +23,26 @@ spring:
   liquibase:
     enabled: false
 
+  banner:
+    location: "classpath:/banner/bannerProd.txt"
+
 #  ACTUATOR
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+#LOGGING
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql: trace
+            BasicBinder: TRACE
 
 springdoc:
   swagger-ui:

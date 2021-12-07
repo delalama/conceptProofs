@@ -3,16 +3,6 @@
 server:
   port: 8080
 
-logging:
-  level:
-    org:
-      hibernate:
-        SQL: DEBUG
-        type:
-          descriptor:
-            sql: trace
-            BasicBinder: TRACE
-
 spring:
   profiles: dev
 
@@ -33,12 +23,26 @@ spring:
   liquibase:
     enabled: false
 
+  banner:
+    location: "classpath:/banner/bannerDev.txt"
+
 #  ACTUATOR
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+#LOGGING
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql: trace
+            BasicBinder: TRACE
 
 springdoc:
   swagger-ui:
