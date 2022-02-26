@@ -15,6 +15,7 @@
         <module>annotations</module>
         <module>aspects</module>
         <module>hibernate</module>
+        <module>factory</module>
     </modules>
 
     <properties>
