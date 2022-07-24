@@ -16,6 +16,7 @@
         <module>aspects</module>
         <module>hibernate</module>
         <module>factory</module>
+        <module>interfaceAndSuperclass</module>
     </modules>
 
     <properties>

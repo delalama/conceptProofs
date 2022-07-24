@@ -9,6 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aspects" />
         <module name="annotations" />
+        <module name="factory" />
+        <module name="interfaceAndSuperclass" />
+        <module name="hibernate" />
         <module name="APIStream" />
       </profile>
     </annotationProcessing>
@@ -18,6 +21,8 @@
       <module name="APIStream" options="-parameters" />
       <module name="annotations" options="-parameters" />
       <module name="aspects" options="-parameters" />
+      <module name="hibernate" options="-parameters" />
+      <module name="interfaceAndSuperclass" options="-parameters" />
     </option>
   </component>
 </project>
